@@ -8,5 +8,6 @@ namespace Application.Dishes.Interface
     {
         Task<Dish> GetDishById(Guid id);
         Task<List<getDishResponse>> GetAllDishes(DishFilter? filter = null);
+        Task<List<string>> GetCategories();
     }
 }

@@ -9,5 +9,6 @@ namespace Application.Dishes.Interface
         Task createDish(createDishRequest request);
         Task<List<getDishResponse>> GetAllDishes(DishFilter? filter = null);
         Task updateDish(Guid id, updateDishRequest request);
+        Task<List<string>> GetCategories();
     }
 }

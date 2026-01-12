@@ -33,5 +33,12 @@ namespace Api.Controller
             await dishService.updateDish(id, request);
             return Ok();
         }
+
+        [HttpGet("categories")]
+        public async Task<IActionResult> GetCategories()
+        {
+            var result = await dishService.GetCategories();
+            return new JsonResult(result);
+        }
     }
 }

@@ -13,3 +13,4 @@
 /home/federico/Documentos/DeliveryApi/src/Application/obj/Debug/net8.0/refint/Application.dll
 /home/federico/Documentos/DeliveryApi/src/Application/obj/Debug/net8.0/Application.pdb
 /home/federico/Documentos/DeliveryApi/src/Application/obj/Debug/net8.0/ref/Application.dll
+/home/federico/Documentos/DeliveryApi/src/Application/obj/Debug/net8.0/Application.sourcelink.json

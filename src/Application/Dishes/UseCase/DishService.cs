@@ -18,14 +18,14 @@ namespace Application.Dishes.UseCase
         {
             var dish = new Dish
             {
-                DishId = request.DishId,
+                DishId = Guid.NewGuid(),
                 Name = request.Name,
                 Description = request.Description,
                 Price = request.Price,
                 Available = request.Available,
                 CategoryId = request.CategoryId,
                 ImageUrl = request.ImageUrl,
-                CreateDate = request.CreateDate
+                CreateDate = DateTime.UtcNow
             };
             await _dishCommand.InsertDish(dish);
         }
@@ -43,6 +43,11 @@ namespace Application.Dishes.UseCase
                 throw new Exception("Dish not found");
             }
             await _dishCommand.UpdateDish(dish, request);
+        }
+
+        public async Task<List<string>> GetCategories()
+        {
+            return await _dishQuery.GetCategories();
         }
     }
 }

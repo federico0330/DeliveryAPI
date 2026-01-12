@@ -17,3 +17,4 @@
 /home/federico/Documentos/DeliveryApi/src/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll
 /home/federico/Documentos/DeliveryApi/src/Infrastructure/bin/Debug/net8.0/Infrastructure.runtimeconfig.json
 /home/federico/Documentos/DeliveryApi/src/Infrastructure/obj/Debug/net8.0/Infrastructure.genruntimeconfig.cache
+/home/federico/Documentos/DeliveryApi/src/Infrastructure/obj/Debug/net8.0/Infrastructure.sourcelink.json

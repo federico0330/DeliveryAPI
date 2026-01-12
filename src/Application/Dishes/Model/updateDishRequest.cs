@@ -1,6 +1,6 @@
 namespace Application.Dishes.Model
 {
-    public class updateDishRequest : createDishRequest
+    public class updateDishRequest
     {
         public string Name { get; set; } = null!;
         public string Description { get; set; } = null!;

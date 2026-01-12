@@ -55,17 +55,25 @@ namespace Infrastructure.Query
                 Available = d.Available,
                 CategoryId = d.CategoryId,
                 Category = d.Category,
-                ImageUrl = d.ImageUrl,
-                CreateDate = d.CreateDate,
-                UpdateDate = d.UpdateDate
+                ImageUrl = d.ImageUrl
             }).ToListAsync();
 
             return await dishes;
         }
 
-        public async Task<Dish> GetDishById(System.Guid id)
+        public async Task<Dish?> GetDishById(System.Guid id)
         {
-            return await _context.Dishes.FirstOrDefaultAsync(d => d.DishId == id)!;
+            return await _context.Dishes.FirstOrDefaultAsync(d => d.DishId == id);
+        }
+
+        public async Task<List<string>> GetCategories()
+        {
+            return await _context.Dishes
+                .Where(d => d.Category != null)
+                .Select(d => d.Category)
+                .Distinct()
+                .OrderBy(c => c)
+                .ToListAsync();
         }
     }
 }
